@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appName">Ictus</string>
+    <string name="doneButton">done</string>
+    <string name="patternTitle">Edit pattern</string>
+    <string name="subdivisionTitle">Edit subdivisions</string>
+    <string name="beatsPerMeasure">beats per measure</string>
+    <string name="tempoTitle">tempo</string>
+    <string name="beatsPerMinute">bpm</string>
+    <string name="increaseTempo">+</string>
+    <string name="decreaseTempo">-</string>
+    <string name="tapTempo">tap tempo</string>
+    <string name="beatNumber">beat</string>
+    <string name="numSubdivisions">subdivisions</string>
+    <string name="edit">edit</string>
+    <string name="playPattern">play</string>
+    <string name="applyPattern">apply pattern to successive beats</string>
+    <string name="beatCount">beat count</string>
+    <string name="loopTitle">Loop maker</string>
+    <string name="newPattern">new pattern</string>
+    <string name="patternNumber">pattern</string>
+    <string name="addToLoop">add to loop</string>
+    <string name="editPattern">edit pattern</string>
+    <string name="newLoop">New loop</string>
+    <string name="saveLoop">Save loop</string>
+    <string name="loadLoop">Load loop</string>
+    <string name="help">Help</string>
+    <string name="exit">Exit</string>
+    <string name="helpInfo"><b><u>Main menu</u></b>\n\n-Click \'New loop\' to start working on a new loop.\n\n
+        -Click \'Save loop\' to save the loop you are currently working on.\n\n
+        -Click \'Load loop\' to continue work on a previously saved loop.\n\n
+        <b><u>The loop screen</u></b>\n\n
+        -The loop screen is where you control the number of times and the order that patterns are played back.\n\n
+        -To add a pattern to the loop, first select the pattern you wish to add using the spinner and then
+        press the \'add to loop\' button.\n\n
+        -The loop is displayed in the middle of the screen with the patterns represented as numbered buttons.\n\n
+        -To remove a pattern from the loop, long click its corresponding button.\n\n
+        -To swap the position of two patterns in the loop, click the first pattern then the pattern you wish to switch
+        it with.\n\n
+        -To edit an existing pattern, first select the pattern using the spinner and then
+        press the \'edit pattern\' button.\n\n
+        -To create a new pattern, press the \'new pattern\' button.\n\n
+        -Once you are done with your loop you can press the \'done\' button and return to the main menu.
+        There you can save any changes you have made.
+    </string>
+
+    <string-array name="beats">
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+        <item>"7"</item>
+        <item>"8"</item>
+        <item>"9"</item>
+        <item>"10"</item>
+        <item>"11"</item>
+        <item>"12"</item>
+        <item>"13"</item>
+        <item>"14"</item>
+        <item>"15"</item>
+        <item>"16"</item>
+        <item>"17"</item>
+        <item>"18"</item>
+        <item>"19"</item>
+        <item>"20"</item>
+    </string-array>
+
+    <string-array name="subdivisions">
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+        <item>"7"</item>
+        <item>"8"</item>
+        <item>"9"</item>
+        <item>"10"</item>
+        <item>"11"</item>
+        <item>"12"</item>
+        <item>"13"</item>
+        <item>"14"</item>
+        <item>"15"</item>
+        <item>"16"</item>
+    </string-array>
+
+</resources>

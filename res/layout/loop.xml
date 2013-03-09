@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:id="@+id/loopRoot">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:layout_gravity="center" android:id="@+id/rlRoot">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp" android:id="@+id/rlSaveTitle">
+            <Button
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:text="@string/doneButton"
+                    android:id="@+id/btnDoneLoop"
+                    android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                    android:layout_alignParentTop="true" android:layout_marginTop="10dp" android:onClick="doneLoop"/>
+            <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/tvLoopTitle"
+                    android:textIsSelectable="true" android:textSize="26sp"
+                    android:layout_marginTop="15dp" android:layout_toRightOf="@+id/btnDoneLoop"
+                    android:layout_marginLeft="35dp" android:textStyle="italic" android:singleLine="true"
+                    android:maxLength="15" android:gravity="center"/>
+        </RelativeLayout>
+        <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_below="@+id/rlSaveTitle" android:id="@+id/svPatternOrder"
+                    android:layout_above="@+id/rlControls">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/LLPatternOrder">
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/rlControls"
+                android:layout_alignParentBottom="true">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp" android:id="@+id/rlLoopControls"
+                    >
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#9b9b9b" android:layout_alignParentTop="true"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/patternNumber"
+                        android:id="@+id/tvPatternNum" android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                        android:layout_alignParentTop="true" android:layout_marginTop="19dp" android:textSize="20sp"/>
+                <Spinner
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/spnrPatternNum"
+                        android:layout_toRightOf="@+id/tvPatternNum" android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp" android:layout_marginTop="4dp"/>
+                <Button
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="@string/addToLoop"
+                        android:id="@+id/btnAddToLoop" android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp" android:layout_marginTop="4dp" android:onClick="addToLoop"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#9b9b9b" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_below="@+id/rlLoopControls" android:id="@+id/rlPatternControls">
+
+                <Button
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="@string/playPattern"
+                        android:id="@+id/btnPlayLoop"
+                        android:layout_toLeftOf="@+id/editPattern" android:layout_alignTop="@+id/btnNewPattern"
+                        android:onClick="playLoop"/>
+                <Button
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="@string/newPattern"
+                        android:id="@+id/btnNewPattern"
+                        android:onClick="newPattern"
+                        android:layout_toRightOf="@+id/editPattern" android:layout_alignTop="@+id/editPattern"/>
+                <Button
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="@string/editPattern"
+                        android:id="@+id/editPattern"
+                        android:layout_centerHorizontal="true" android:layout_marginTop="5dp"
+                        android:onClick="editPattern"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

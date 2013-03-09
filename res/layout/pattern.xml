@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/patternRoot">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="horizontal"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:id="@+id/rlRoot">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rlBackTitle">
+                <Button
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:text="@string/doneButton"
+                        android:id="@+id/btnPatternDone"
+                        android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                        android:layout_alignParentTop="true" android:layout_marginTop="10dp"
+                        android:onClick="donePattern"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/patternTitle"
+                        android:id="@+id/txtPatternTitle"
+                        android:textIsSelectable="true" android:textSize="26sp"
+                        android:layout_marginTop="15dp" android:layout_toRightOf="@+id/btnPatternDone"
+                        android:layout_marginLeft="35dp" android:textStyle="italic"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_below="@+id/rlBackTitle" android:id="@+id/rlNumBeats">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@string/beatsPerMeasure"
+                        android:id="@+id/txtNumBeats"
+                        android:layout_marginLeft="10dp" android:layout_marginTop="15dp"
+                        />
+                <Spinner
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:entries="@array/beats"
+                        android:id="@+id/spnrPatNumBeats" android:layout_alignParentLeft="false" android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/txtNumBeats"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rlTempo"
+                    android:layout_below="@+id/rlNumBeats">
+                <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:text="@string/increaseTempo"
+                        android:id="@+id/btnPatIncTempo" android:layout_toRightOf="@+id/btnPatDecTempo"
+                        android:layout_alignTop="@+id/txtTempoTitle" android:onClick="increaseTempo"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvTempo" android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/txtTempoTitle" android:textSize="20sp"/>
+                <SeekBar
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/seekPatTempo" android:layout_centerHorizontal="true" android:layout_alignParentTop="false"
+                        android:layout_alignParentBottom="false" android:layout_alignParentLeft="false"
+                        android:layout_below="@+id/txtBeatsPerMin" android:layout_marginTop="10dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/tempoTitle"
+                        android:id="@+id/txtTempoTitle"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp" android:layout_alignParentLeft="true"
+                        android:textSize="20sp"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#9b9b9b"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/beatsPerMinute"
+                        android:id="@+id/txtBeatsPerMin"
+                        android:layout_below="@+id/txtTempoTitle" android:layout_marginLeft="50dp" android:textSize="20sp"
+                        android:layout_alignParentLeft="true"/>
+                <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:text="@string/decreaseTempo"
+                        android:id="@+id/btnPatDecTempo" android:layout_alignParentLeft="false" android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/txtBeatsPerMin"
+                        android:layout_alignTop="@+id/txtTempoTitle" android:onClick="decreaseTempo"/>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="@string/tapTempo"
+                        android:id="@+id/btnPatTapTempo" android:layout_toRightOf="@+id/btnPatIncTempo"
+                        android:layout_alignTop="@+id/txtTempoTitle" android:layout_alignParentRight="false"
+                        android:onClick="tapTempo"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" android:layout_below="@+id/rlTempo"
+                    android:layout_marginTop="5dp" android:id="@+id/rlColHeader">
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#9b9b9b" android:layout_alignParentTop="true"/>
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/beatNumber"
+                        android:id="@+id/txtBeatNum" android:layout_alignParentLeft="false"
+                        android:layout_alignParentTop="false" android:textSize="20sp"
+                        android:maxLines="2" android:minLines="2" android:gravity="center"
+                        android:layout_centerVertical="true" android:layout_toLeftOf="@+id/leftColBar"
+                        android:layout_marginRight="5dp"/>
+                <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="#9b9b9b"
+                            android:id="@+id/leftColBar" android:layout_toLeftOf="@+id/txtNumSubdivisions"
+                            android:layout_marginRight="5dp"/>
+                <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/numSubdivisions"
+                            android:id="@+id/txtNumSubdivisions" android:layout_alignParentLeft="false"
+                            android:layout_alignBottom="@+id/txtBeatNum" android:textSize="20sp"
+                            android:minLines="2" android:gravity="center"
+                            android:layout_marginRight="5dp" android:layout_centerHorizontal="true"/>
+                <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="#9b9b9b"
+                            android:id="@+id/rightColBar"
+                            android:layout_toRightOf="@+id/txtNumSubdivisions"/>
+                <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/edit"
+                            android:id="@+id/txtEditPattern"
+                            android:textSize="20sp" android:minLines="2" android:gravity="center"
+                            android:layout_alignTop="@+id/txtBeatNum"
+                            android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/rightColBar"/>
+                <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="#9b9b9b" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp" android:layout_below="@+id/rlColHeader"
+                    android:id="@+id/rlSubdivEdit">
+
+
+                <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="#9b9b9b"
+                        android:id="@+id/leftColBtnBar"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/spnrPatNumSubdivisions" android:layout_alignBottom="@+id/view"/>
+                <Spinner
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/spnrPatNumSubdivisions"
+                        android:entries="@array/subdivisions"
+                        android:layout_alignParentLeft="false"
+                        android:layout_centerInParent="true"/>
+
+                <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="#9b9b9b"
+                        android:id="@+id/rightColBtnBar"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/spnrPatNumSubdivisions" android:layout_alignBottom="@+id/view"/>
+                <Button
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="@string/edit"
+                        android:id="@+id/btnPatEditPattern"
+                        android:layout_centerVertical="true" android:layout_toRightOf="@+id/rightColBtnBar"
+                        android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+                        android:onClick="clickEdit"/>
+                <Spinner
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/spnrPatSelectedBeat"
+                        android:layout_centerVertical="true" android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/leftColBtnBar"
+                        />
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#9b9b9b" android:layout_alignParentBottom="true" android:id="@+id/view"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_below="@+id/rlSubdivEdit" android:id="@+id/rlPatternOptions">
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="@string/applyPattern"
+                        android:id="@+id/btnPatApplyPattern" android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp" android:onClick="applyPattern"/>
+                <Button
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:text="@string/playPattern"
+                        android:id="@+id/btnPatPlayPattern"
+                        android:layout_alignParentLeft="true" android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/btnPatApplyPattern" android:onClick="clickPlay"/>
+                <ToggleButton
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:text="New ToggleButton"
+                        android:id="@+id/tbtnAccentBeat"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignBottom="@+id/btnPatPlayPattern" android:layout_marginRight="5dp"
+                        android:layout_alignParentRight="true" android:checked="true"/>
+                <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="60dp"
+                        android:text="accent first beat"
+                        android:id="@+id/txtAccentBeat"
+                        android:textSize="20sp" android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/btnPatApplyPattern"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+</LinearLayout>
